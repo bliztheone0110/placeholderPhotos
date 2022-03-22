@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC, useEffect, useState, useContext } from 'react';
 import './App.css';
+import AppRouter from './components/AppRouter';
+import { Layout } from "antd";
+import NavBar from './components/NavBar';
+import { useActions } from './hooks/useActions';
+import { IUser } from './models/IUser';
+import { ThemeContext } from './context/themeContext';
+import './styles/fonts.css';
 
-function App() {
+const App: FC = () => {
+  const themeContext = useContext(ThemeContext);
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const { setUser, setIsAuth } = useActions()
+
+  const toggleTheme = (): void => {
+    setIsDarkTheme(prev => !prev)
+  }
+
+  useEffect(() => {
+    if (localStorage.getItem('auth')) {
+      setUser({ username: localStorage.getItem('username' || '') } as IUser)
+      setIsAuth(true)
+    }
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout className={isDarkTheme ? 'layout_dark' : ''}>
+        <NavBar isDarkTheme={isDarkTheme} setIsDarkTheme={toggleTheme} />
+        <ThemeContext.Provider value={isDarkTheme}>
+          <Layout.Content className={isDarkTheme ? 'layout_content__dark' : 'layout_content'}>
+            <AppRouter />
+          </Layout.Content>
+        </ThemeContext.Provider>
+    </Layout>
   );
 }
 

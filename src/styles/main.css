@@ -1,0 +1,26 @@
+h1 {
+    font-size: var(--font-size-h1);
+    line-height: 1.2;
+    color: var(--color-text-main);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    line-height: 1.2;
+    color: var(--color-text-main);
+}
+
+p {
+    font-size: var(--font-size-text);
+    line-height: 1.2;
+    color: var(--color-text-main);
+}
+
+.layout_dark h1, .layout_dark h2, .layout_dark p {
+    color: var(--color-text-main-dark);
+}
+
+.h100 {
+    height: calc(100vh - 64px);
+    max-height: calc(100vh - 64px);
+}
