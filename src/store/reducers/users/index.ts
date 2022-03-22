@@ -1,6 +1,5 @@
 
 import { UsersActionEnum, UsersActions, UsersState } from './types';
-import { IUser } from './../../../models/IUser';
 import { IFullUser } from './../../../models/IFullUser';
 
 const initialState: UsersState = {
