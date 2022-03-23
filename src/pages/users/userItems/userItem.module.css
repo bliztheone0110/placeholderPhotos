@@ -1,0 +1,33 @@
+.user_wrapper {
+    width: 20%;
+    position: relative;
+}
+
+.user_wrapper:nth-child(3n-3) {
+    width: 40%;
+}
+
+.user_content {
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    padding: 20px;
+    background: var(--color-background-white);
+    color: var(--color-text-main);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.user_content:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 8px 0px rgba(34, 60, 80, 0.4);
+}
+
+.user_heightSetter {
+    padding-bottom: 80%;
+}
+
+.user_wrapper:nth-child(3n-3) .user_heightSetter {
+    padding-bottom: 40%;
+}
