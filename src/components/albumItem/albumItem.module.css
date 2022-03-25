@@ -1,0 +1,19 @@
+.item_wrapper {
+    width: 33.33%;
+    padding: 10px;
+}
+
+.item_content {
+    display: block;
+    height: 78px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: var(--color-background-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 2px;
+}
+
+.item_content:hover {
+    box-shadow: var(--box-shadow-hover);
+    cursor: pointer;
+}

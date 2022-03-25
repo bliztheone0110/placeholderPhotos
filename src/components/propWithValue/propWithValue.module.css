@@ -1,0 +1,14 @@
+.propLine {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.propName {
+    font-size: var(--font-size-text-small);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.prop {
+    font-size: var(--font-size-text-small);
+}

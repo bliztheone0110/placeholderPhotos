@@ -11,7 +11,7 @@ interface UsersProps {
 const Users: FC<UsersProps> = (props) => {
     return (
         <Container>
-            <FlexBox>
+            <FlexBox flexWrap='wrap'>
                 {props.users.map(user =>
                     <UserItem key={user.id} user={user} />
                 )}

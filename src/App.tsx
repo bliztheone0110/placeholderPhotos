@@ -9,7 +9,6 @@ import { ThemeContext } from './context/themeContext';
 import './styles/fonts.css';
 
 const App: FC = () => {
-  const themeContext = useContext(ThemeContext);
   const [isDarkTheme, setIsDarkTheme] = useState(false)
   const { setUser, setIsAuth } = useActions()
 

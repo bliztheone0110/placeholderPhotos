@@ -3,18 +3,22 @@ import { useParams } from 'react-router-dom';
 import { useActions } from './../../hooks/useActions';
 import { useTypedSelector } from './../../hooks/useTypedSelector';
 import { IFullUser } from './../../models/IFullUser';
+import User from './User';
+import { Spin } from 'antd';
+import Container from './../../components/container/Container';
 
 const UserContainer = () => {
-    const [currentUser, setcurrentUser] = useState(undefined as IFullUser | undefined)
-    const { getCurrentUser, setUsers } = useActions()
-    const { isUsersLoading, isUsersError, users } = useTypedSelector(state => state.usersReducer)
+    const { getCurrentUser } = useActions()
+    const { isUsersLoading, usersError, users } = useTypedSelector(state => state.usersReducer)
     let { id } = useParams()
+    let currentUser: IFullUser | undefined = users.find(user => user.id === Number(id))
+    const [currentUserState, setCurrentUserState] = useState(currentUser)
 
     useMemo(() => {
-        let currentUser = users.find(user => user.id === Number(id))
+        currentUser = users.find(user => user.id === Number(id))
 
         if (currentUser) {
-            setcurrentUser(currentUser)
+            setCurrentUserState(currentUser)
         }
     }, [users])
 
@@ -25,9 +29,10 @@ const UserContainer = () => {
     }, [])
 
     return (
-        <div>
-            {currentUser ? <p>{currentUser.name}</p> : ''}
-        </div>
+        <Spin spinning={isUsersLoading && !currentUser}>
+            {usersError.length !== 0 && <Container><h1>{usersError}</h1></Container>}
+            {currentUserState ? <User user={currentUserState} /> : ''}
+        </Spin>
     );
 };
 

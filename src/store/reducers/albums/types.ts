@@ -4,7 +4,7 @@ import { IAlbum } from './../../../models/IAlbum';
 export interface AlbumsState {
     albums: IAlbum[];
     isAlbumsLoading: boolean;
-    isAlbumsError: string;
+    AlbumsError: string;
 }
 
 export enum AlbumsActionEnum {

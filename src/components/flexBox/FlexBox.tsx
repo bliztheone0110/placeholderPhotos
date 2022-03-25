@@ -1,13 +1,31 @@
 import React, { FC } from 'react';
-import c from './flexBox.module.css'
 
-interface flexBoxProps {
-    column?: string;
+interface FlexBoxProps {
+    flexDirection?: 'row' | 'column',
+    justifyContent?: string
+    flexWrap?: 'wrap' | 'nowrap' | 'wrap-reverse',
+    alignItems?: string
+    margin?: string
+    padding?: string
+    width?: string
+    height?: string
+    maxWidth?: string
 }
 
-const FlexBox: FC<flexBoxProps> = (props) => {
+const FlexBox: FC<FlexBoxProps> = (props) => {
     return (
-        <div className={c.flex_box} style={props.column ? {alignItems: 'column'} : {}}>
+        <div style={{
+            display: 'flex',
+            justifyContent: props.justifyContent || 'flex-start',
+            flexDirection: props.flexDirection || 'row',
+            flexWrap: props.flexWrap || 'nowrap',
+            alignItems: props.alignItems || 'flex-start',
+            margin: props.margin || '0',
+            padding: props.padding || '0',
+            width: props.width || 'auto',
+            height: props.height || 'auto',
+            maxWidth: props.maxWidth || 'none'
+          }}>
             {props.children}
         </div>
     );

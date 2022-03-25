@@ -3,8 +3,8 @@ import { IFullUser } from './../../../models/IFullUser';
 
 export interface UsersState {
     users: IFullUser[];
+    usersError: string;
     isUsersLoading: boolean;
-    isUsersError: string;
 }
 
 export enum UsersActionEnum {

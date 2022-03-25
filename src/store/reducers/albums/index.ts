@@ -2,7 +2,7 @@ import { AlbumsActionEnum, AlbumsState, AlbumsActions } from './types';
 import { IAlbum } from './../../../models/IAlbum';
 
 const initialState: AlbumsState = {
-    isAlbumsError: '',
+    AlbumsError: '',
     isAlbumsLoading: false,
     albums: [] as IAlbum[],
 }
@@ -10,7 +10,7 @@ const initialState: AlbumsState = {
 export default function albumsReducer(state = initialState, action: AlbumsActions): AlbumsState {
     switch (action.type) {
         case AlbumsActionEnum.SET_ALBUMS_ERROR:
-            return { ...state, isAlbumsLoading: false, isAlbumsError: action.payload }
+            return { ...state, isAlbumsLoading: false, AlbumsError: action.payload }
         case AlbumsActionEnum.SET_ALBUMS_IS_LOADING:
             return { ...state, isAlbumsLoading: action.payload }
         case AlbumsActionEnum.SET_ALBUMS:

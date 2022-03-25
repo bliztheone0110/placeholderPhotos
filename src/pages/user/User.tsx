@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { FC } from 'react';
+import Container from './../../components/container/Container';
+import { IFullUser } from './../../models/IFullUser';
+import FlexBox from './../../components/flexBox/FlexBox';
+import UserInfo from './userInfo/UserInfo';
+import UserContentContainer from './userContent/UserContentContainer';
 
-const User = () => {
+interface UserProps {
+    user: IFullUser;
+}
+
+const User: FC<UserProps> = (props) => {
     return (
-        <div>
-            
-        </div>
+        <Container>
+            <FlexBox>
+                <UserInfo user={props.user} />
+                <UserContentContainer userId={props.user.id} />
+            </FlexBox>
+        </Container>
     );
 };
 

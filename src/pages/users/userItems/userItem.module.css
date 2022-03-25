@@ -31,3 +31,21 @@
 .user_wrapper:nth-child(3n-3) .user_heightSetter {
     padding-bottom: 40%;
 }
+
+@media (max-width: 768px) {
+    .user_wrapper {
+        width: 50%;
+    }
+
+    .user_wrapper:nth-child(3n-3) {
+        width: 50%;
+    }
+
+    .user_heightSetter {
+        padding-bottom: 50%;
+    }
+    
+    .user_wrapper:nth-child(3n-3) .user_heightSetter {
+        padding-bottom: 50%;
+    }
+}

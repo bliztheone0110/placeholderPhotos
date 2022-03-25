@@ -3,7 +3,7 @@ import { UsersActionEnum, UsersActions, UsersState } from './types';
 import { IFullUser } from './../../../models/IFullUser';
 
 const initialState: UsersState = {
-    isUsersError: '',
+    usersError: '',
     isUsersLoading: false,
     users: [] as IFullUser[],
 }
@@ -11,7 +11,7 @@ const initialState: UsersState = {
 export default function usersReducer(state = initialState, action: UsersActions): UsersState {
     switch (action.type) {
         case UsersActionEnum.SET_ERROR:
-            return { ...state, isUsersLoading: false, isUsersError: action.payload }
+            return { ...state, isUsersLoading: false, usersError: action.payload }
         case UsersActionEnum.SET_IS_LOADING:
             return { ...state, isUsersLoading: action.payload }
         case UsersActionEnum.SET_USERS:

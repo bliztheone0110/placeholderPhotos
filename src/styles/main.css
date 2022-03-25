@@ -14,6 +14,12 @@ p {
     font-size: var(--font-size-text);
     line-height: 1.2;
     color: var(--color-text-main);
+    margin: 0;
+}
+
+img {
+    max-weight: 100%;
+    object-fit: cover;
 }
 
 .layout_dark h1, .layout_dark h2, .layout_dark p {

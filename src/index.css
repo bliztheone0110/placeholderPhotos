@@ -6,6 +6,7 @@ body {
 
 body * {
   transition: 300ms;
+  box-sizing: border-box;
 }
 
 code {
