@@ -1,9 +1,15 @@
 import React, { FC } from 'react';
 import c from './container.module.css'
 
-const Container: FC = (props) => {
+interface ContainerProps {
+    autoHeight?: string;
+}
+
+const Container: FC<ContainerProps> = (props) => {
     return (
-        <div className={c.container}>
+        <div className={c.container} style={{
+            minHeight: props.autoHeight || 'calc(100vh - 64px)',
+        }}>
             {props.children}
         </div>
     );

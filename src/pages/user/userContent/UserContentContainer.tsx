@@ -1,29 +1,36 @@
 import React, { FC, useEffect } from 'react';
-import albumsReducer from './../../../store/reducers/albums/index';
 import { useTypedSelector } from './../../../hooks/useTypedSelector';
 import { useActions } from './../../../hooks/useActions';
-import Albums from './albums/Albums';
-import { Spin } from 'antd';
+import UserContent from './UserContent';
 
 interface UserContentContainerProps {
     userId: number;
 }
 
 const UserContentContainer: FC<UserContentContainerProps> = (props) => {
-    const { getAlbums, setAlbums } = useActions()
+    const { getAlbums, setAlbums, getPosts, setPosts } = useActions()
     const { albums, AlbumsError, isAlbumsLoading } = useTypedSelector(state => state.albumsReducer)
+    const { posts, postsError, isPostsLoading } = useTypedSelector(state => state.postsReducer)
 
     useEffect(() => {
         getAlbums(props.userId)
+        getPosts(props.userId)
 
-        return () => { setAlbums([]) }
+        return () => {
+            setAlbums([])
+            setPosts([])
+        }
     }, [])
 
     return (
-        <Spin spinning={isAlbumsLoading && albums.length === 0}>
-            {AlbumsError.length > 0 && <h1>{AlbumsError}</h1>}
-            {albums.length !== 0 ? <Albums albums={albums} /> : ''}
-        </Spin>
+        <UserContent
+            albums={albums}
+            AlbumsError={AlbumsError}
+            isAlbumsLoading={isAlbumsLoading}
+            posts={posts}
+            postsError={postsError}
+            isPostsLoading={isPostsLoading}
+        />
     );
 };
 

@@ -1,4 +1,4 @@
-.albums_content {
+.section_content {
     background: var(--color-transparent-background);
     border-radius: 10px;
     padding: 15px;
@@ -6,6 +6,6 @@
     margin-bottom: 20px;
 }
 
-.albums_content h1 {
+.section_content h1 {
     text-align: center;
 }

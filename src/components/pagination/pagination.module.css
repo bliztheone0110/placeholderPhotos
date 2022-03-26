@@ -1,0 +1,10 @@
+.pagination_element {
+    font-size: var(--font-size-text-small);
+    background: var(--color-background-white);
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.pagination_element:hover {
+    cursor: pointer;
+}

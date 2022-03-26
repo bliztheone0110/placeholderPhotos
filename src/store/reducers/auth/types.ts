@@ -11,7 +11,7 @@ export interface AuthState {
 export enum AuthActionEnum {
     SET_AUTH = "SET_AUTH",
     SET_USER = "SET_USER",
-    SET_IS_LOADING = "SET_IS_LOADING",
+    SET_IS_AUTH_LOADING = "SET_IS_AUTH_LOADING",
     SET_ERROR = "SET_ERROR",
 }
 
@@ -26,7 +26,7 @@ export interface SetErrorAction {
 }
 
 export interface SetisLoadingAction {
-    type: AuthActionEnum.SET_IS_LOADING;
+    type: AuthActionEnum.SET_IS_AUTH_LOADING;
     payload: boolean;
 }
 

@@ -2,6 +2,7 @@
     --color-background-dark: #DAAD86;
     --color-background-light: #FBEEC1;
     --color-background-white: #fafafa;
+    --color-transparent-background: rgba(255, 255, 255, 0.3);
     --color-border: #78BBE2;
     --color-text-main: #0b0b0b;
     --color-text-main-dark: #1b1b1b;

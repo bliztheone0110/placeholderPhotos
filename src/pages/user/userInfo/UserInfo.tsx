@@ -10,8 +10,8 @@ interface MainInfoProps {
 
 const UserInfo: FC<MainInfoProps> = (props) => {
     return (
-        <div>
-            <div className={c.main}>
+        <div className={c.main}>
+            <div className={c.main_content}>
                 <img src={userImg} alt={props.user.name} />
                 <PropWithValue propName={'Имя'} prop={props.user.name} centered />
                 <PropWithValue propName={'Телефон'} prop={props.user.phone} centered />

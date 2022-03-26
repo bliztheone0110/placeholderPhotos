@@ -7,7 +7,7 @@ import { AuthActionEnum, SetUserAction, SetAuthAction, SetisLoadingAction, SetEr
 export const AuthActionCreators = {
     setUser: (user: IUser): SetUserAction => ({ type: AuthActionEnum.SET_USER, payload: user }),
     setIsAuth: (isAuth: boolean): SetAuthAction => ({ type: AuthActionEnum.SET_AUTH, payload: isAuth }),
-    setIsUserLoading: (isLoading: boolean): SetisLoadingAction => ({ type: AuthActionEnum.SET_IS_LOADING, payload: isLoading }),
+    setIsUserLoading: (isLoading: boolean): SetisLoadingAction => ({ type: AuthActionEnum.SET_IS_AUTH_LOADING, payload: isLoading }),
     setUserError: (error: string): SetErrorAction => ({ type: AuthActionEnum.SET_ERROR, payload: error }),
     login: (username: string, password: string) => async (dispatch: AppDispatch) => {
         try {

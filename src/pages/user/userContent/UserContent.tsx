@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { IFullUser } from './../../../models/IFullUser';
 import Container from './../../../components/container/Container';
+import AlbumsSection from './albums/Albums';
+import { IAlbum } from './../../../models/IAlbum';
+import { IPost } from './../../../models/IPost';
+import PostsContainer from './posts/PostsContainer';
 
 interface UserContentProps {
-    user: IFullUser;
+    albums: IAlbum[];
+    AlbumsError: string;
+    isAlbumsLoading: boolean;
+    posts: IPost[];
+    postsError: string;
+    isPostsLoading: boolean;
 }
 
-const UserContent = () => {
+const UserContent: FC<UserContentProps> = (props) => {
     return (
         <Container>
-            
+            <AlbumsSection AlbumsError={props.AlbumsError} albums={props.albums} />
+            <PostsContainer postsError={props.postsError} posts={props.posts} itemsPerScreen={10}/>
         </Container>
     );
 };

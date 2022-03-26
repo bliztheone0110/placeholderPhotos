@@ -4,7 +4,7 @@ import { IPhoto } from './../../../models/IPhoto';
 export interface PhotosState {
     photos: IPhoto[];
     isPhotosLoading: boolean;
-    isPhotosError: string;
+    photosError: string;
 }
 
 export enum PhotosActionEnum {

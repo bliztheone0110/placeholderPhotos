@@ -15,8 +15,8 @@ const NavBar: FC<NavBarprops> = (props) => {
     const { logout } = useActions()
 
     return (
-        <Layout.Header style={props.isDarkTheme ? { background: '#001529' } : { background: '#ffffff' }}>
-            <Container>
+        <Layout.Header className='sticky' style={props.isDarkTheme ? { background: '#001529' } : { background: '#ffffff' }}>
+            <Container autoHeight='auto'>
                 <Menu theme={props.isDarkTheme ? 'dark' : 'light'} mode="horizontal" selectable={false} style={{ border: '0' }}>
                     {isAuth
                         ?

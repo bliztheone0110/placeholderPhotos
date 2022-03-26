@@ -11,7 +11,7 @@ const AlbumItem: FC<AlbumItemProps> = (props) => {
     return (
         <div className={c.item_wrapper}>
             <Link className={c.item_content} to={`/album/${props.album.id}`}>
-                <p>{props.album.title}</p>
+                {props.album.title}
             </Link>
         </div>
     );

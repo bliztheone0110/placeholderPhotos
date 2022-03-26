@@ -2,7 +2,7 @@
     max-width: 1140px;
     padding: 0 20px;
     margin: 0 auto;
-    min-height: calc(100vh - 63px);
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
