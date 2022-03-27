@@ -1,10 +1,9 @@
 import React, { FC } from 'react';
-import FlexBox from '../../../../components/flexBox/FlexBox';
-import AlbumItemFiller from '../../../../components/albumItemFiller/AlbumItemFiller';
+import AlbumItemFiller from '../../../../components/userItems/albumItemFiller/AlbumItemFiller';
 import { IAlbum } from '../../../../models/IAlbum';
-import AlbumItem from '../../../../components/albumItem/AlbumItem';
-import c from './albums.module.css'
-import SectionWrapper from './../../../../components/sectionWrapper/SectionWrapper';
+import AlbumItem from '../../../../components/userItems/albumItem/AlbumItem';
+import FlexBox from './../../../../components/containers/flexBox/FlexBox';
+import UserSectionWrapper from './../../../../components/containers/userSectionWrapper/UserSectionWrapper';
 
 interface AlbumsSectionProps {
     AlbumsError: string;
@@ -13,7 +12,7 @@ interface AlbumsSectionProps {
 
 const AlbumsSection: FC<AlbumsSectionProps> = (props) => {
     return (
-        <SectionWrapper>
+        <UserSectionWrapper>
             {
                 props.AlbumsError.length > 0
                     ? <h1>{props.AlbumsError}</h1>
@@ -30,7 +29,7 @@ const AlbumsSection: FC<AlbumsSectionProps> = (props) => {
                         {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(num => <AlbumItemFiller key={num} />)}
                     </FlexBox>
             }
-        </SectionWrapper>
+        </UserSectionWrapper>
     );
 };
 

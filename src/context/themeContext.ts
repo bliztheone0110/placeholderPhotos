@@ -1,3 +1,3 @@
 import React from 'react'
 
-export const ThemeContext = React.createContext<boolean>(false);
+export const isThemeDarkContext = React.createContext<boolean>(false);

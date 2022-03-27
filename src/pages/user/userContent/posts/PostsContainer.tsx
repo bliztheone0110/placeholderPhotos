@@ -10,7 +10,6 @@ interface PostsSectionProps {
 
 const PostsContainer: FC<PostsSectionProps> = (props) => {
     const [currentPage, setCurrentPage] = useState(1)
-    debugger;
     const totalPaginationItems = Math.ceil(props.posts.length / props.itemsPerScreen)
     let currentPosts = props.posts.slice(
         0 + props.itemsPerScreen * (currentPage - 1),

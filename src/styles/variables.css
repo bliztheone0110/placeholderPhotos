@@ -2,10 +2,12 @@
     --color-background-dark: #DAAD86;
     --color-background-light: #FBEEC1;
     --color-background-white: #fafafa;
+    --color-background-white-dark-theme: #f5e6e6;
     --color-transparent-background: rgba(255, 255, 255, 0.3);
     --color-border: #78BBE2;
     --color-text-main: #0b0b0b;
     --color-text-main-dark: #1b1b1b;
+    --color-text-light: #fafafa;
     
     --font-size-h1: 32px;
     --font-size-h2: 26px;
@@ -14,4 +16,22 @@
 
     --box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     --box-shadow-hover: 5px 5px 8px 0px rgba(34, 60, 80, 0.4);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-h1: 24px;
+        --font-size-h2: 20px;
+        --font-size-text: 14px;
+        --font-size-text-small: 12px;
+    }
+}
+
+@media (max-width: 540px) {
+    :root {
+        --font-size-h1: 20px;
+        --font-size-h2: 18px;
+        --font-size-text: 12px;
+        --font-size-text-small: 10px;
+    }
 }

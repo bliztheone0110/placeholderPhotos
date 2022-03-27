@@ -3,7 +3,7 @@ import { useActions } from './../../hooks/useActions';
 import { useTypedSelector } from './../../hooks/useTypedSelector';
 import Users from './Users';
 import { Spin } from 'antd';
-import Container from './../../components/container/Container';
+import Container from '../../components/containers/container/Container';
 
 const UsersContainer: FC = () => {
     const { getUsers } = useActions()

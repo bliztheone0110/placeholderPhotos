@@ -1,0 +1,38 @@
+.photo_wrapper {
+    width: 20%;
+    padding: 10px;
+}
+
+.photo_content {
+    background: var(--color-transparent-background);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.photo_content:hover {
+    cursor: pointer;
+}
+
+.photo_content p {
+    height: 50px;
+    font-size: var(--font-size-text-small);
+    font-weight: bold;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.photo_content img {
+    width: 100%;
+}
+
+@media(max-width: 768px) {
+    .photo_wrapper {
+        width: 33.3%;
+    }
+}
+
+@media (max-width: 540px) {
+    .photo_wrapper {
+        width: 50%;
+    }
+}

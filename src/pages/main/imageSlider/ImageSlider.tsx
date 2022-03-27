@@ -23,7 +23,7 @@ const ImageSlider: FC<ImageSliderProps> = (props) => {
         >
             {props.images.map(image => 
                 <SwiperSlide key={image}>
-                    <img src={image} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    <img src={image} alt='slider image' style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                 </SwiperSlide>
             )}
         </Swiper>

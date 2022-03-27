@@ -1,13 +1,10 @@
 import React, { FC } from 'react';
-import FlexBox from '../../../../components/flexBox/FlexBox';
-import AlbumItemFiller from '../../../../components/albumItemFiller/AlbumItemFiller';
-import AlbumItem from '../../../../components/albumItem/AlbumItem';
-import c from './posts.module.css'
 import { IPost } from './../../../../models/IPost';
-import SectionWrapper from './../../../../components/sectionWrapper/SectionWrapper';
-import PostItemFiller from './../../../../components/postItemFiller/PostItemFiller';
-import PostItem from './../../../../components/postItem/PostItem';
+import PostItemFiller from '../../../../components/userItems/postItemFiller/PostItemFiller';
+import PostItem from '../../../../components/userItems/postItem/PostItem';
 import Pagination from './../../../../components/pagination/Pagination';
+import UserSectionWrapper from './../../../../components/containers/userSectionWrapper/UserSectionWrapper';
+import FlexBox from './../../../../components/containers/flexBox/FlexBox';
 
 interface PostsSectionProps {
     postsError: string;
@@ -20,7 +17,7 @@ interface PostsSectionProps {
 
 const Posts: FC<PostsSectionProps> = (props) => {
     return (
-        <SectionWrapper>
+        <UserSectionWrapper>
             {
                 props.postsError.length > 0
                     ? <h1>{props.postsError}</h1>
@@ -38,7 +35,7 @@ const Posts: FC<PostsSectionProps> = (props) => {
                     </FlexBox>
             }
             <Pagination currentPage={props.currentPage} totalPages={props.totalPaginationItems} setCurrentPage={props.setCurrentPageFunc} />
-        </SectionWrapper>
+        </UserSectionWrapper>
     );
 };
 

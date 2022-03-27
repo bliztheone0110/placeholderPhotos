@@ -5,10 +5,12 @@ import photosReducer from './photos/index';
 import albumsReducer from './albums/index';
 import postsReducer from './posts/index';
 
-export default {
+const reducers = {
     authReducer,
     usersReducer,
     photosReducer,
     albumsReducer,
     postsReducer,
 }
+
+export default reducers

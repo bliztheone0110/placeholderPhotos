@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
-import { IFullUser } from './../../../models/IFullUser';
-import Container from './../../../components/container/Container';
+import Container from '../../../components/containers/container/Container';
 import AlbumsSection from './albums/Albums';
 import { IAlbum } from './../../../models/IAlbum';
 import { IPost } from './../../../models/IPost';

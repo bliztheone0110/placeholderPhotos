@@ -2,10 +2,10 @@ import React, { FC, useEffect, useState, useContext } from 'react';
 import './App.css';
 import AppRouter from './components/AppRouter';
 import { Layout } from "antd";
-import NavBar from './components/NavBar';
+import NavBar from './components/header/NavBar';
 import { useActions } from './hooks/useActions';
 import { IUser } from './models/IUser';
-import { ThemeContext } from './context/themeContext';
+import { isThemeDarkContext } from './context/themeContext';
 import './styles/fonts.css';
 
 const App: FC = () => {
@@ -25,12 +25,12 @@ const App: FC = () => {
 
   return (
     <Layout className={isDarkTheme ? 'layout_dark' : ''}>
-        <NavBar isDarkTheme={isDarkTheme} setIsDarkTheme={toggleTheme} />
-        <ThemeContext.Provider value={isDarkTheme}>
-          <Layout.Content className={isDarkTheme ? 'layout_content__dark' : 'layout_content'}>
-            <AppRouter />
-          </Layout.Content>
-        </ThemeContext.Provider>
+      <NavBar isDarkTheme={isDarkTheme} setIsDarkTheme={toggleTheme} />
+      <isThemeDarkContext.Provider value={isDarkTheme}>
+        <Layout.Content className={isDarkTheme ? 'layout_content__dark' : 'layout_content'}>
+          <AppRouter />
+        </Layout.Content>
+      </isThemeDarkContext.Provider>
     </Layout>
   );
 }

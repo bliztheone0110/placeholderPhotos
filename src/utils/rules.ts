@@ -1,5 +1,3 @@
-import { message } from "antd";
-
 function isValidHttpUrl(string: string):boolean {
     let url;
 

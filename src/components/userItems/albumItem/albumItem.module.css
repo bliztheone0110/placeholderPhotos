@@ -10,7 +10,6 @@
     font-size: var(--font-size-text-small);
     color: var(--color-text-main);
     padding: 10px;
-    background-color: var(--color-background-white);
     box-shadow: var(--box-shadow);
     border-radius: 2px;
 }

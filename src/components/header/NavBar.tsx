@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { Layout, Menu } from 'antd';
-import { useTypedSelector } from '../hooks/useTypedSelector';
-import { useActions } from '../hooks/useActions';
+import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { useActions } from '../../hooks/useActions';
 import { Link } from 'react-router-dom';
-import Container from './container/Container';
+import Container from '../containers/container/Container';
 
 interface NavBarprops {
     isDarkTheme: boolean;

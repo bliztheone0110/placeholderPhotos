@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { IFullUser } from '../../models/IFullUser';
-import FlexBox from './../../components/flexBox/FlexBox';
-import Container from './../../components/container/Container';
-import UserItem from './userItems/UserItem';
+import Container from '../../components/containers/container/Container';
+import UserItem from '../../components/userItems/userItem/UserItem';
+import FlexBox from './../../components/containers/flexBox/FlexBox';
 
 interface UsersProps {
     users: IFullUser[];

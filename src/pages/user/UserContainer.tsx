@@ -5,12 +5,12 @@ import { useTypedSelector } from './../../hooks/useTypedSelector';
 import { IFullUser } from './../../models/IFullUser';
 import User from './User';
 import { Spin } from 'antd';
-import Container from './../../components/container/Container';
+import Container from '../../components/containers/container/Container';
 
 const UserContainer = () => {
+    let { id } = useParams()
     const { getCurrentUser } = useActions()
     const { isUsersLoading, usersError, users } = useTypedSelector(state => state.usersReducer)
-    let { id } = useParams()
     let currentUser: IFullUser | undefined = users.find(user => user.id === Number(id))
     const [currentUserState, setCurrentUserState] = useState(currentUser)
 

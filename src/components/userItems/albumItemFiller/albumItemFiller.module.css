@@ -8,7 +8,6 @@
     height: 78px;
     overflow: hidden;
     padding: 10px;
-    background-color: var(--color-background-white);
     box-shadow: var(--box-shadow);
     border-radius: 2px;
     animation: flashing 0.5s ease-in-out infinite;

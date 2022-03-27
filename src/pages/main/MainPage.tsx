@@ -1,8 +1,8 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import ImageSlider from './imageSlider/ImageSlider';
 import MainPageForm from './mainPageForm/MainPageForm';
-import ContentOverPage from '../../components/contentOverPage/ContentOverPage';
-import Container from './../../components/container/Container';
+import Container from '../../components/containers/container/Container';
+import ContentOverPage from './../../components/containers/contentOverPage/ContentOverPage';
 
 interface MainPageProps {
     images: string[];

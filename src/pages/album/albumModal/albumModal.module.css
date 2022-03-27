@@ -1,0 +1,43 @@
+.modal_content {
+    position: relative;
+    width: 30%;
+    height: auto;
+    padding: 25px;
+    border-radius: 10px;
+    background: var(--color-background-white);
+}
+
+.modal_content h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal_content img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modal_close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal_close:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .modal_content {
+        width: 65%;
+    }
+}
+
+@media (max-width: 540px) {
+    .modal_content {
+        width: 90%;
+    }
+}

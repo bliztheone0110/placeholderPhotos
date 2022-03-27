@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import c from './userInfo.module.css'
 import userImg from './../../../img/user.png'
 import { IFullUser } from '../../../models/IFullUser';
-import PropWithValue from '../../../components/propWithValue/PropWithValue';
+import PropWithValue from '../../../components/userItems/propWithValue/PropWithValue';
 
 interface MainInfoProps {
     user: IFullUser;

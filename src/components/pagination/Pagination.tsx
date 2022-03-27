@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import FlexBox from '../flexBox/FlexBox';
 import c from './pagination.module.css'
+import FlexBox from './../containers/flexBox/FlexBox';
 
 interface PaginationProps {
     totalPages: number;
