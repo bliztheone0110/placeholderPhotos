@@ -30,9 +30,9 @@
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modal_content {
-        width: 65%;
+        width: 75%;
     }
 }
 

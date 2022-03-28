@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 
 interface FlexBoxProps {
+    display?: 'block' | 'flex'
     flexDirection?: 'row' | 'column',
     justifyContent?: string
     flexWrap?: 'wrap' | 'nowrap' | 'wrap-reverse',
@@ -15,7 +16,7 @@ interface FlexBoxProps {
 const FlexBox: FC<FlexBoxProps> = (props) => {
     return (
         <div style={{
-            display: 'flex',
+            display: props.display || 'flex',
             justifyContent: props.justifyContent || 'flex-start',
             flexDirection: props.flexDirection || 'row',
             flexWrap: props.flexWrap || 'nowrap',

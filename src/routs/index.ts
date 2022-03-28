@@ -4,6 +4,7 @@ import UsersContainer from './../pages/users/UsersContainer';
 import MainPageContainer from './../pages/main/MainPageContainer';
 import UserContainer from './../pages/user/UserContainer';
 import AlbumContainer from './../pages/album/AlbumContainer';
+
 export interface IRoute {
     path: string;
     component: React.ComponentType;

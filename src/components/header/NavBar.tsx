@@ -17,31 +17,33 @@ const NavBar: FC<NavBarprops> = (props) => {
     return (
         <Layout.Header className='sticky' style={props.isDarkTheme ? { background: '#001529' } : { background: '#ffffff' }}>
             <Container autoHeight='auto'>
-                <Menu theme={props.isDarkTheme ? 'dark' : 'light'} mode="horizontal" selectable={false} style={{ border: '0' }}>
-                    {isAuth
-                        ?
-                        <Menu.Item key={1} onClick={() => logout()}>
-                            <Link to="/" >Выйти из аккаунта</Link>
+                <nav>
+                    <Menu theme={props.isDarkTheme ? 'dark' : 'light'} mode="horizontal" selectable={false} style={{ border: '0' }}>
+                        {isAuth
+                            ?
+                            <Menu.Item key={1} onClick={() => logout()}>
+                                <Link to="/" >logout</Link>
+                            </Menu.Item>
+                            :
+                            <Menu.Item key={1}>
+                                <Link to="/" >login</Link>
+                            </Menu.Item>
+                        }
+                        {isAuth &&
+                            <Menu.Item key={2}>
+                                <Link to="/" >Главная</Link>
+                            </Menu.Item>
+                        }
+                        {isAuth &&
+                            <Menu.Item key={3}>
+                                <Link to="/users" >Пользователи</Link>
+                            </Menu.Item>
+                        }
+                        <Menu.Item key={99} onClick={() => props.setIsDarkTheme()}>
+                            {props.isDarkTheme ? 'светлая тема' : 'тёмная тема'}
                         </Menu.Item>
-                        :
-                        <Menu.Item key={1}>
-                            <Link to="/" >Авторизоваться</Link>
-                        </Menu.Item>
-                    }
-                    {isAuth &&
-                        <Menu.Item key={2}>
-                            <Link to="/" >Главная</Link>
-                        </Menu.Item>
-                    }
-                    {isAuth &&
-                        <Menu.Item key={3}>
-                            <Link to="/users" >Пользователи</Link>
-                        </Menu.Item>
-                    }
-                    <Menu.Item key={99} onClick={() => props.setIsDarkTheme()}>
-                        {props.isDarkTheme ? 'светлая тема' : 'тёмная тема'}
-                    </Menu.Item>
-                </Menu>
+                    </Menu>
+                </nav>
             </Container>
         </Layout.Header>
     );

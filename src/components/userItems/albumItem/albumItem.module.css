@@ -6,7 +6,6 @@
 .item_content {
     display: block;
     height: 78px;
-    overflow: hidden;
     font-size: var(--font-size-text-small);
     color: var(--color-text-main);
     padding: 10px;
@@ -17,4 +16,17 @@
 .item_content:hover {
     box-shadow: var(--box-shadow-hover);
     cursor: pointer;
+}
+
+.item_content span {
+    display: block;
+    height: 58px;
+    overflow: hidden;
+}
+
+@media (max-width: 540px) {
+    .item_wrapper {
+        width: 50%;
+        padding: 7.5px;
+    }
 }

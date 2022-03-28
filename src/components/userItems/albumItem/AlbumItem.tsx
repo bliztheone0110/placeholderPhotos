@@ -12,7 +12,7 @@ const AlbumItem: FC<AlbumItemProps> = (props) => {
     let isDarkThemeContext = useContext(isThemeDarkContext)
 
     return (
-        <div className={c.item_wrapper} >
+        <article className={c.item_wrapper} >
             <Link
                 className={c.item_content}
                 to={`/album/${props.album.id}`}
@@ -20,9 +20,9 @@ const AlbumItem: FC<AlbumItemProps> = (props) => {
                     background: isDarkThemeContext ? 'var(--color-background-white-dark-theme)' : 'var(--color-background-white)',
                 }}
             >
-                {props.album.title}
+                <span>{props.album.title}</span>
             </Link>
-        </div>
+        </article>
     );
 };
 

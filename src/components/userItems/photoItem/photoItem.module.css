@@ -7,10 +7,12 @@
     background: var(--color-transparent-background);
     padding: 15px;
     border-radius: 5px;
+    box-shadow: var(--box-shadow);
 }
 
 .photo_content:hover {
     cursor: pointer;
+    box-shadow: var(--box-shadow-hover);
 }
 
 .photo_content p {

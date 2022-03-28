@@ -16,7 +16,7 @@ const PostItem: FC<PostItemProps> = (props) => {
     }
 
     return (
-        <div
+        <article
             className={c.post_wrapper}
             onClick={() => toggleActive()}
             style={{
@@ -27,7 +27,7 @@ const PostItem: FC<PostItemProps> = (props) => {
             <p className={c.post_text} style={{ maxHeight: isActive === true ? '200px' : '0' }}>
                 {props.post.body}
             </p>
-        </div>
+        </article>
     );
 };
 

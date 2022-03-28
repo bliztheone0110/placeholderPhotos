@@ -7,10 +7,10 @@ interface SectionWrapperProps {
 
 const UserSectionWrapper: FC<SectionWrapperProps> = (props) => {
     return (
-        <div className={c.section_content}>
+        <section className={c.section_content}>
             {props.title !== undefined && <h1>{props.title}</h1>}
             {props.children}
-        </div>
+        </section>
     );
 };
 

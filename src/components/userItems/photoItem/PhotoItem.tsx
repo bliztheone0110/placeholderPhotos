@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { IPhoto } from './../../../models/IPhoto';
 import c from './photoItem.module.css'
-import Tilt from 'react-parallax-tilt';
 
 interface PhotoItemProps {
     photo: IPhoto;
@@ -10,19 +9,17 @@ interface PhotoItemProps {
 
 const PhotoItem: FC<PhotoItemProps> = (props) => {
     return (
-        <div className={c.photo_wrapper}>
-            <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
-                <div
-                    className={c.photo_content}
-                    onClick={() => {
-                        props.openModal(props.photo.title, props.photo.url)
-                    }}
-                >
-                    <p>{props.photo.title}</p>
-                    <img src={props.photo.url} alt={props.photo.title} />
-                </div>
-            </Tilt>
-        </div>
+        <article className={c.photo_wrapper}>
+            <div
+                className={c.photo_content}
+                onClick={() => {
+                    props.openModal(props.photo.title, props.photo.url)
+                }}
+            >
+                <p>{props.photo.title}</p>
+                <img src={props.photo.url} alt={props.photo.title} />
+            </div>
+        </article>
     );
 };
 
